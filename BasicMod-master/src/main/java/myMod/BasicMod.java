@@ -5,7 +5,7 @@ import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import myMod.cards.BaseCard;
-import myMod.character.Monk;
+import myMod.character.HoshimachiSuisei;
 import myMod.util.GeneralUtils;
 import myMod.util.KeywordInfo;
 import myMod.util.TextureLoader;
@@ -51,7 +51,7 @@ public class BasicMod implements
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     public static void initialize() {
         new BasicMod();
-        BaseMod.addColor(Monk.Enums.CARD_COLOR, cardColor,
+        BaseMod.addColor(HoshimachiSuisei.Enums.CARD_COLOR, cardColor,
                 BG_ATTACK, BG_SKILL, BG_POWER, ENERGY_ORB,
                 BG_ATTACK_P, BG_SKILL_P, BG_POWER_P, ENERGY_ORB_P,
                 SMALL_ORB);
@@ -206,8 +206,8 @@ public class BasicMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new Monk(),
-                CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT, Monk.Enums.YOUR_CHARACTER);
+        BaseMod.addCharacter(new HoshimachiSuisei(),
+                CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT, HoshimachiSuisei.Enums.YOUR_CHARACTER);
     }
 
     @Override

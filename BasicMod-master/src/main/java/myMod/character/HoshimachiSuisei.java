@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import static myMod.BasicMod.characterPath;
 import static myMod.BasicMod.makeID;
 
-public class Monk extends CustomPlayer {
+public class HoshimachiSuisei extends CustomPlayer {
     //Stats
     public static final int ENERGY_PER_TURN = 3;
     public static final int MAX_HP = 70;
@@ -37,7 +37,7 @@ public class Monk extends CustomPlayer {
     public static final int ORB_SLOTS = 0;
 
     //Strings
-    private static final String ID = makeID("Monk"); //This should match whatever you have in the CharacterStrings.json file
+    private static final String ID = makeID("HoshimachiSuisei"); //This should match whatever you have in the CharacterStrings.json file
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
@@ -52,13 +52,13 @@ public class Monk extends CustomPlayer {
         //Library color is basically the same as card color, but you need both because that's how the game was made.
         @SpireEnum
         public static AbstractPlayer.PlayerClass YOUR_CHARACTER;
-        @SpireEnum(name = "Monk_pink_color") // These two MUST match. Change it to something unique for your character.
+        @SpireEnum(name = "HoshimachiSuisei_pink_color") // These two MUST match. Change it to something unique for your character.
         public static AbstractCard.CardColor CARD_COLOR;
-        @SpireEnum(name = "Monk_pink_color") @SuppressWarnings("unused")
+        @SpireEnum(name = "HoshimachiSuisei_pink_color") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
-    public Monk() {
+    public HoshimachiSuisei() {
         super(NAMES[0], Enums.YOUR_CHARACTER,
                 new CustomEnergyOrb(null, null, null), //Energy Orb
                 new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
@@ -198,6 +198,6 @@ public class Monk extends CustomPlayer {
     @Override
     public AbstractPlayer newInstance() {
         //Makes a new instance of your character class.
-        return new Monk();
+        return new HoshimachiSuisei();
     }
 }

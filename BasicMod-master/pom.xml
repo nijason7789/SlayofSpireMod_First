@@ -19,8 +19,8 @@
     </properties>
 
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
-    <name>Basic Mod</name>
-    <version>0.0.0</version>
+    <name>Sui Chan</name>
+    <version>0.0.1</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
     <description>Testing Description~</description>
