@@ -5,6 +5,7 @@ import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import myMod.cards.BaseCard;
+import myMod.cards.MonkRareCard;
 import myMod.character.HoshimachiSuisei;
 import myMod.util.GeneralUtils;
 import myMod.util.KeywordInfo;
@@ -31,6 +32,7 @@ import java.util.Set;
 
 @SpireInitializer
 public class BasicMod implements
+        EditRelicsSubscriber,
         EditCardsSubscriber,
         EditCharactersSubscriber,
         EditStringsSubscriber,
@@ -216,5 +218,15 @@ public class BasicMod implements
                 .packageFilter(BaseCard.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
+
+        new AutoAdd(modID)
+                .packageFilter(MonkRareCard.class)
+                .setDefaultSeen(true)
+                .cards();
+    }
+
+    @Override
+    public void receiveEditRelics() {
+
     }
 }
